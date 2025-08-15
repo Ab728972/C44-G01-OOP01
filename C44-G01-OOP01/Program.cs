@@ -37,5 +37,37 @@
             }
         }
         #endregion
+        #region Question 3 - Seasons Enum
+        enum Season { Spring, Summer, Autumn, Winter }
+
+        static void DisplaySeasonMonths()
+        {
+            Console.Write("Enter season: ");
+            string input = Console.ReadLine();
+
+            if (Enum.TryParse(input, true, out Season season))
+            {
+                switch (season)
+                {
+                    case Season.Spring:
+                        Console.WriteLine("March - May");
+                        break;
+                    case Season.Summer:
+                        Console.WriteLine("June - August");
+                        break;
+                    case Season.Autumn:
+                        Console.WriteLine("September - November");
+                        break;
+                    case Season.Winter:
+                        Console.WriteLine("December - February");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid season");
+            }
+        }
+        #endregion
     }
 }
