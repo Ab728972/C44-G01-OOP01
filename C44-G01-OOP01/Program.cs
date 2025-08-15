@@ -87,5 +87,24 @@
             }
         }
         #endregion
+        #region Question 5 - Point Struct
+        struct Point
+        {
+            public double X;
+            public double Y;
+        }
+
+        static double CalculateDistance(Point p1, Point p2)
+        {
+            return Math.Sqrt(Math.Pow(p2.X - p1.X, 2) + Math.Pow(p2.Y - p1.Y, 2));
+        }
+
+        static void GetPointsAndCalculateDistance()
+        {
+            Point p1 = new Point { X = 1, Y = 2 };
+            Point p2 = new Point { X = 4, Y = 6 };
+            Console.WriteLine($"Distance: {CalculateDistance(p1, p2)}");
+        }
+        #endregion
     }
 }
