@@ -106,5 +106,29 @@
             Console.WriteLine($"Distance: {CalculateDistance(p1, p2)}");
         }
         #endregion
+        #region Question 6 - Oldest Person
+        static void FindOldestPerson()
+        {
+            Person[] people = new Person[3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write($"Enter name {i + 1}: ");
+                string name = Console.ReadLine();
+                Console.Write($"Enter age {i + 1}: ");
+                int age = Convert.ToInt32(Console.ReadLine());
+                people[i] = new Person { Name = name, Age = age };
+            }
+
+            Person oldest = people[0];
+            foreach (var person in people)
+            {
+                if (person.Age > oldest.Age)
+                    oldest = person;
+            }
+
+            Console.WriteLine($"Oldest: {oldest.Name}, Age: {oldest.Age}");
+        }
+        #endregion
     }
 }
