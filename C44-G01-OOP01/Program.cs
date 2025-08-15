@@ -69,5 +69,23 @@
             }
         }
         #endregion
+        #region Question 4 - Colors Enum
+        enum Colors { Red, Green, Blue }
+
+        static void CheckPrimaryColor()
+        {
+            Console.Write("Enter color: ");
+            string input = Console.ReadLine();
+
+            if (Enum.TryParse(input, true, out Colors color))
+            {
+                Console.WriteLine($"{color} is a primary color");
+            }
+            else
+            {
+                Console.WriteLine("Not a primary color");
+            }
+        }
+        #endregion
     }
 }
